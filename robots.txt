@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://casacevio.ch/sitemap.xml

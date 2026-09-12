@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="[[htmlLang]]">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GENERADO AUTOMATICAMENTE por build.py — no editar a mano.
+     Textos: i18n/de.json, en.json, fr.json, it.json
+     Datos:  data.json
+     Estilo: style.css -->
+<title>[[metaTitle]]</title>
+<meta name="description" content="[[metaDesc]]">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://{{DOMAIN}}/[[file]]">
+<!--HREFLANG-->
+<meta name="theme-color" content="#f5e9e1">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="[[ogLocale]]">
+<meta property="og:site_name" content="{{MARKE}}">
+<meta property="og:title" content="[[metaTitle]]">
+<meta property="og:description" content="[[metaDesc]]">
+<meta property="og:url" content="https://{{DOMAIN}}/[[file]]">
+<meta property="og:image" content="https://{{DOMAIN}}/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">[[skip]]</a>
+
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="brand" href="#top">{{MARKE_1}} <em>{{MARKE_2}}</em></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">[[menu]]</button>
+    <nav class="nav" id="nav">
+      <a href="#wohnungen">[[navFlats]]</a>
+      <a href="#region">[[navRegion]]</a>
+      <a href="#lage">[[navTravel]]</a>
+      <a href="#ueber-uns">[[navAbout]]</a>
+      <a href="#faq">[[navFaq]]</a>
+      <a href="#kontakt">[[navContact]]</a>
+      <div class="langs"><!--LANGS--></div>
+      <a class="btn" href="#kontakt">[[book]]</a>
+    </nav>
+    <div class="langs"><!--LANGS--></div>
+    <a class="btn" href="#kontakt">[[book]]</a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="hero__media">
+    <!-- FOTO PRINCIPAL. Minimo 2400 px de ancho. -->
+    <div class="ph"><span>[[phHero]]</span></div>
+  </div>
+  <div class="hero__in">
+    <p class="eyebrow">[[heroEyebrow]]</p>
+    <h1>[[heroH1]]</h1>
+    <p class="hero__p">[[heroP]]</p>
+    <div class="btns">
+      <a class="btn" href="#wohnung-1">{{WOHNUNG_1}}</a>
+      <a class="btn btn--ghost" href="#wohnung-2">{{WOHNUNG_2}}</a>
+      <a class="btn btn--ghost" href="#ganzes-haus">[[heroBtn3]]</a>
+    </div>
+    <div class="hero__social">
+      <span class="rating"><i class="stars">★★★★★</i> <b>{{NOTE}}</b> {{ANZAHL}} [[reviewsWord]]</span>
+      <p class="minq">«{{KURZZITAT_1}}»<small>{{GAST_KURZ_1}}</small></p>
+      <p class="minq">«{{KURZZITAT_2}}»<small>{{GAST_KURZ_2}}</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">[[tourEyebrow]]</p>
+    <h2>[[tourH2]]</h2>
+    <p class="lede">[[tourLede]]</p>
+    <div class="tour">
+      <figure>
+        <a href="{{VIDEO_URL_1}}">
+          <div class="ph r16x9"><span>[[phVideo]] {{WOHNUNG_1}}</span></div>
+          <div class="play"><span>▶</span></div>
+        </a>
+        <figcaption><b>{{WOHNUNG_1}}</b>[[tourCap1]]
+          <a class="arrow" href="#wohnung-1">[[tourLink]] →</a></figcaption>
+      </figure>
+      <figure>
+        <a href="{{VIDEO_URL_2}}">
+          <div class="ph r16x9"><span>[[phVideo]] {{WOHNUNG_2}}</span></div>
+          <div class="play"><span>▶</span></div>
+        </a>
+        <figcaption><b>{{WOHNUNG_2}}</b>[[tourCap2]]
+          <a class="arrow" href="#wohnung-2">[[tourLink]] →</a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--lt" id="wohnungen">
+  <div class="wrap">
+    <p class="eyebrow">[[flatsEyebrow]]</p>
+    <h2>[[flatsH2]]</h2>
+    <p class="lede">[[flatsLede]]</p>
+    <div class="flats">
+      <article class="flat" id="wohnung-1">
+        <div class="flat__img">
+          <div class="ph r4x3"><span>[[phLiving]] {{WOHNUNG_1}}</span></div>
+          <span class="badge">👥 [[upTo]] {{GAESTE_1}} [[guestsWord]]</span>
+        </div>
+        <div class="flat__body">
+          <p class="flat__place">Cevio · Valle Maggia</p>
+          <h3>{{WOHNUNG_1}}</h3>
+          <p>[[flat1Desc]] {{DETAIL_1}}</p>
+          <ul class="specs">
+            <li><b>[[specSize]]</b><span>{{QM_1}} m², {{SCHLAFZIMMER_1}} [[bedroomsWord]]</span></li>
+            <li><b>[[specBeds]]</b><span>{{BETTEN_1}}</span></li>
+            <li><b>[[specBath]]</b><span>{{BAD_1}}</span></li>
+            <li><b>[[specKitchen]]</b><span>[[kitchenVal]]</span></li>
+            <li><b>[[specOutdoor]]</b><span>{{AUSSEN_1}}</span></li>
+          </ul>
+          <p class="price">[[fromWord]] CHF {{PREIS_1}} / [[nightWord]]
+            <small>[[priceNote1]]</small></p>
+          <a class="btn" href="#kontakt">[[flatCta]] →</a>
+        </div>
+      </article>
+      <article class="flat" id="wohnung-2">
+        <div class="flat__img">
+          <div class="ph r4x3"><span>[[phLiving]] {{WOHNUNG_2}}</span></div>
+          <span class="badge">👥 [[upTo]] {{GAESTE_2}} [[guestsWord]]</span>
+        </div>
+        <div class="flat__body">
+          <p class="flat__place">Cevio · Valle Maggia</p>
+          <h3>{{WOHNUNG_2}}</h3>
+          <p>[[flat2Desc]] {{DETAIL_2}}</p>
+          <ul class="specs">
+            <li><b>[[specSize]]</b><span>{{QM_2}} m², {{SCHLAFZIMMER_2}} [[bedroomsWord]]</span></li>
+            <li><b>[[specBeds]]</b><span>{{BETTEN_2}}</span></li>
+            <li><b>[[specBath]]</b><span>{{BAD_2}}</span></li>
+            <li><b>[[specKitchen]]</b><span>[[kitchenVal]]</span></li>
+            <li><b>[[specOutdoor]]</b><span>{{AUSSEN_2}}</span></li>
+          </ul>
+          <p class="price">[[fromWord]] CHF {{PREIS_2}} / [[nightWord]]
+            <small>[[priceNote2]]</small></p>
+          <a class="btn" href="#kontakt">[[flatCta]] →</a>
+        </div>
+      </article>
+    </div>
+    <div class="whole" id="ganzes-haus">
+      <div class="ph"><span>[[phHouse]]</span></div>
+      <div class="whole__txt">
+        <p class="eyebrow">[[wholeEyebrow]]</p>
+        <h3>[[wholeH3]]</h3>
+        <p>[[wholeP]]</p>
+        <p class="price">[[fromWord]] CHF {{PREIS_HAUS}} / [[nightWord]]
+          <small>[[priceNoteShort]]</small></p>
+        <div class="btns"><a class="btn" href="#kontakt">[[wholeCta]] →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <p>[[band1]]</p>
+  <a class="btn btn--light" href="#kontakt">[[book]]</a>
+</div>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">[[perksEyebrow]]</p>
+    <h2>[[perksH2]]</h2>
+    <ul class="perks">
+      <li><span class="ico">💰</span><span>[[perk1]]</span></li>
+      <li><span class="ico">✓</span><span>[[perk2]]</span></li>
+      <li><span class="ico">💬</span><span>[[perk3]]</span></li>
+      <li><span class="ico">🔑</span><span>[[perk4]]</span></li>
+      <li><span class="ico">🔒</span><span>{{ZAHLUNG}}</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec--lt">
+  <div class="wrap">
+    <p class="eyebrow">[[whoEyebrow]]</p>
+    <h2>[[whoH2]]</h2>
+    <div class="who">
+      <article><span class="ico">👨‍👩‍👧‍👦</span><h3>[[whoFamT]]</h3><p>[[whoFamP]] {{KINDERBETT}}.</p></article>
+      <article><span class="ico">🐕</span><h3>[[whoDogT]]</h3><p>{{HUNDE}} [[whoDogP]]</p></article>
+      <article><span class="ico">💻</span><h3>[[whoWorkT]]</h3><p>[[whoWorkP]] {{WOCHEN_RABATT}}.</p></article>
+    </div>
+    <div class="notes">
+      <div class="note"><span class="ico">🐕</span><span><b>[[note1T]]</b><small>{{HUNDE_PREIS}}</small></span></div>
+      <div class="note"><span class="ico">👶</span><span><b>[[note2T]]</b><small>{{KINDERBETT}}</small></span></div>
+      <div class="note"><span class="ico">🅿️</span><span><b>[[note3T]]</b><small>[[note3S]]</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark">
+  <div class="wrap">
+    <h2>[[seasonsH2]]</h2>
+    <p class="lede">[[seasonsLede]]</p>
+    <div class="seasons">
+      <div class="season">
+        <div class="ph r4x3"><span>[[phRiver]]</span></div>
+        <h3>☀️ [[summerT]]</h3>
+        <ul><li>[[s1]]</li><li>[[s2]]</li><li>[[s3]]</li><li>[[s4]]</li><li>[[s5]]</li></ul>
+      </div>
+      <div class="season">
+        <div class="ph r4x3"><span>[[phAutumn]]</span></div>
+        <h3>❄️ [[winterT]]</h3>
+        <ul><li>[[w1]]</li><li>[[w2]]</li><li>[[w3]]</li><li>[[w4]]</li><li>[[w5]]</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="region">
+  <div class="wrap">
+    <p class="eyebrow">[[regEyebrow]]</p>
+    <h2>[[regH2]]</h2>
+    <p class="lede">[[regLede]]</p>
+    <div class="why">
+      <dl>
+        <dt>[[reg1T]]</dt><dd>[[reg1D]]</dd>
+        <dt>[[reg2T]]</dt><dd>[[reg2D]]</dd>
+        <dt>[[reg3T]]</dt><dd>[[reg3D]]</dd>
+        <dt>[[reg4T]]</dt><dd>[[reg4D]]</dd>
+      </dl>
+      <div class="ph r3x4"><span>[[phRoofs]]</span></div>
+    </div>
+    <h3 style="margin-top:56px">[[galH3]]</h3>
+    <div class="gal">
+      <figure><div class="ph r4x3"><span>Foroglio</span></div><figcaption>[[g1]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Val Bavona</span></div><figcaption>[[g2]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Robiei</span></div><figcaption>[[g3]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Maggia</span></div><figcaption>[[g4]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Grotti di Cevio</span></div><figcaption>[[g5]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Bosco Gurin</span></div><figcaption>[[g6]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Lago del Sambuco</span></div><figcaption>[[g7]]</figcaption></figure>
+      <figure><div class="ph r4x3"><span>Locarno / Ascona</span></div><figcaption>[[g8]]</figcaption></figure>
+    </div>
+    <p class="credit">[[creditWord]]: {{BILDNACHWEIS}}</p>
+  </div>
+</section>
+
+<div class="band">
+  <p>[[band2]]</p>
+  <a class="btn btn--light" href="#kontakt">[[book]]</a>
+</div>
+
+<section class="sec sec--lt" id="lage">
+  <div class="wrap">
+    <p class="eyebrow">[[locEyebrow]]</p>
+    <h2>[[locH2]]</h2>
+    <p class="lede">[[locLede]]</p>
+    <div class="loc">
+      <iframe title="[[mapTitle]]" loading="lazy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=8.591%2C46.311%2C8.615%2C46.322&amp;layer=mapnik&amp;marker=46.3167%2C8.6031"></iframe>
+      <div>
+        <ul class="dist">
+          <li><b>{{MIN_HALTESTELLE}} [[minWord]]</b><span>[[d1]]</span></li>
+          <li><b>5 [[minWord]]</b><span>[[d2]]</span></li>
+          <li><b>{{MIN_MAGGIA}} [[minWord]]</b><span>[[d3]]</span></li>
+          <li><b>30 [[minWord]]</b><span>[[d4]]</span></li>
+          <li><b>30 [[minWord]]</b><span>[[d5]]</span></li>
+          <li><b>{{MIN_LOCARNO}} [[minWord]]</b><span>[[d6]]</span></li>
+          <li><b>{{STD_ZUERICH}} [[hWord]]</b><span>[[d7]]</span></li>
+          <li><b>{{STD_MILANO}} [[hWord]]</b><span>[[d8]]</span></li>
+        </ul>
+        <address><strong>{{MARKE}}</strong><br>{{STRASSE}}<br>6675 Cevio<br>[[cantonLine]]</address>
+        <div class="btns">
+          <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=46.3167,8.6031">[[mapsBtn]] ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="about">
+      <div class="ph r1x1"><span>[[phUs]]</span></div>
+      <div>
+        <p class="eyebrow">[[aboutEyebrow]]</p>
+        <h2>[[aboutH2]]</h2>
+        <p>[[aboutP1a]] <strong>{{NAMEN}}</strong>. [[aboutP1b]] {{JAHR}} [[aboutP1c]]</p>
+        <p>[[aboutP2]] {{PERSOENLICHES}}</p>
+        <p class="quote">„[[aboutQuote]]"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--lt">
+  <div class="wrap">
+    <p class="eyebrow">[[revsEyebrow]]</p>
+    <h2>[[revsH2]]</h2>
+    <p class="lede"><i class="stars">★★★★★</i> <strong>{{NOTE}}</strong> [[outOf]] {{ANZAHL}} [[reviewsWord]]</p>
+    <!-- Pega aqui resenas REALES de Airbnb/Booking. Traducelas al idioma de cada pagina
+         (o dejalas en el idioma original del huesped, indicando el nombre y la fecha). -->
+    <div class="revs">
+      <blockquote class="rev"><i class="stars">★★★★★</i><p>{{BEWERTUNG_1}}</p><footer><b>{{GAST_1}}</b>{{ORT_DATUM_1}}</footer></blockquote>
+      <blockquote class="rev"><i class="stars">★★★★★</i><p>{{BEWERTUNG_2}}</p><footer><b>{{GAST_2}}</b>{{ORT_DATUM_2}}</footer></blockquote>
+      <blockquote class="rev"><i class="stars">★★★★★</i><p>{{BEWERTUNG_3}}</p><footer><b>{{GAST_3}}</b>{{ORT_DATUM_3}}</footer></blockquote>
+      <blockquote class="rev"><i class="stars">★★★★★</i><p>{{BEWERTUNG_4}}</p><footer><b>{{GAST_4}}</b>{{ORT_DATUM_4}}</footer></blockquote>
+      <blockquote class="rev"><i class="stars">★★★★★</i><p>{{BEWERTUNG_5}}</p><footer><b>{{GAST_5}}</b>{{ORT_DATUM_5}}</footer></blockquote>
+      <blockquote class="rev"><i class="stars">★★★★★</i><p>{{BEWERTUNG_6}}</p><footer><b>{{GAST_6}}</b>{{ORT_DATUM_6}}</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">[[partEyebrow]]</p>
+    <h2>[[partH2]]</h2>
+    <p class="lede">[[partLede]]</p>
+    <div class="partners">
+      <div><b>{{PARTNER_1}}</b><small>{{PARTNER_1_INFO}}</small></div>
+      <div><b>{{PARTNER_2}}</b><small>{{PARTNER_2_INFO}}</small></div>
+      <div><b>{{PARTNER_3}}</b><small>{{PARTNER_3_INFO}}</small></div>
+      <div><b>Ticino Turismo</b><small>[[partTourism]]</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--lt" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">[[faqEyebrow]]</p>
+    <h2>[[faqH2]]</h2>
+    <div class="faq">
+      <details open><summary>[[q1]]</summary><div class="ans"><p>[[a1]]</p></div></details>
+      <details><summary>[[q2]]</summary><div class="ans"><p>[[a2]]</p></div></details>
+      <details><summary>[[q3]]</summary><div class="ans"><p>[[a3]]</p></div></details>
+      <details><summary>[[q4]]</summary><div class="ans"><p>[[a4]]</p></div></details>
+      <details><summary>[[q5]]</summary><div class="ans"><p>[[a5]]</p></div></details>
+      <details><summary>[[q6]]</summary><div class="ans"><p>[[a6]]</p></div></details>
+      <details><summary>[[q7]]</summary><div class="ans"><p>[[a7]]</p></div></details>
+      <details><summary>[[q8]]</summary><div class="ans"><p>[[a8]]</p></div></details>
+      <details><summary>[[q9]]</summary><div class="ans"><p>[[a9]]</p></div></details>
+      <details><summary>[[q10]]</summary><div class="ans"><p>[[a10]]</p></div></details>
+      <details><summary>[[q11]]</summary><div class="ans"><p>[[a11]]</p></div></details>
+      <details><summary>[[q12]]</summary><div class="ans"><p>[[a12]]</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark" id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow">[[contEyebrow]]</p>
+    <h2>[[contH2]]</h2>
+    <p class="lede">[[contLede]]</p>
+    <div class="contact">
+      <form id="anfrage">
+        <div class="field"><label for="f-name">[[fName]]</label>
+          <input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="f-mail">[[fMail]]</label>
+          <input id="f-mail" type="email" name="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-daten">[[fDates]]</label>
+          <input id="f-daten" name="daten" placeholder="[[fDatesPh]]"></div>
+        <div class="field"><label for="f-msg">[[fMsg]]</label>
+          <textarea id="f-msg" name="nachricht" rows="5"></textarea></div>
+        <button class="btn" type="submit">[[fSend]]</button>
+        <p class="formnote">[[fConsent]]</p>
+      </form>
+      <div>
+        <p style="color:#D9C8BE">[[contDirect]]</p>
+        <ul class="direct">
+          <li><a href="mailto:{{EMAIL}}">✉ {{EMAIL}}</a></li>
+          <li><a href="https://wa.me/{{WHATSAPP_INTL}}">WhatsApp {{TELEFON}}</a></li>
+          <li>{{STRASSE}}, 6675 Cevio, [[cantonShort]]</li>
+        </ul>
+        <p class="formnote">[[contNote]]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__cols">
+      <div>
+        <a class="brand" href="#top">{{MARKE_1}} <em>{{MARKE_2}}</em></a>
+        <p style="margin-top:14px">[[ftTagline]]</p>
+      </div>
+      <div><h4>[[ftContact]]</h4>
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+        <a href="https://wa.me/{{WHATSAPP_INTL}}">WhatsApp {{TELEFON}}</a></div>
+      <div><h4>[[ftAddress]]</h4>
+        <p style="margin:0">{{STRASSE}}<br>6675 Cevio<br>[[cantonLineShort]]</p></div>
+      <div><h4>[[ftLinks]]</h4>
+        <a href="#wohnungen">[[navFlats]]</a>
+        <a href="[[fileRules]]">[[ftRules]]</a>
+        <a href="[[fileImprint]]">[[ftImprint]]</a>
+        <a href="[[filePrivacy]]">[[ftPrivacy]]</a></div>
+    </div>
+    <p class="ft__btm">© <span id="jahr">2026</span> {{MARKE}} · Cevio, Valle Maggia, [[countryWord]]</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'), n=document.getElementById('nav');
+  b.addEventListener('click',function(){
+    var o=n.getAttribute('data-open')==='true';
+    n.setAttribute('data-open',String(!o)); b.setAttribute('aria-expanded',String(!o));
+  });
+  n.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){n.setAttribute('data-open','false');b.setAttribute('aria-expanded','false');}
+  });
+})();
+document.getElementById('jahr').textContent=new Date().getFullYear();
+/* Formulario sin servidor: abre el cliente de correo ya rellenado.
+   Con hosting, cambialo por Formspree / Netlify Forms. */
+document.getElementById('anfrage').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target, g=function(n){return (f.elements[n].value||'').trim();};
+  var body='[[fName]]: '+g('name')+'\n[[fMail]]: '+g('email')+'\n'+
+           '[[fDates]]: '+g('daten')+'\n\n'+g('nachricht');
+  window.location.href='mailto:{{EMAIL}}?subject='+
+    encodeURIComponent('{{MARKE}} - '+g('name'))+'&body='+encodeURIComponent(body);
+});
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LodgingBusiness","name":"{{MARKE}}",
+"description":"[[metaDesc]]","url":"https://{{DOMAIN}}/[[file]]","email":"{{EMAIL}}",
+"telephone":"{{TELEFON}}","inLanguage":"[[htmlLang]]",
+"address":{"@type":"PostalAddress","streetAddress":"{{STRASSE}}","postalCode":"6675",
+"addressLocality":"Cevio","addressRegion":"TI","addressCountry":"CH"},
+"geo":{"@type":"GeoCoordinates","latitude":46.3167,"longitude":8.6031},
+"petsAllowed":true,"numberOfRooms":2}
+</script>
+</body>
+</html>
