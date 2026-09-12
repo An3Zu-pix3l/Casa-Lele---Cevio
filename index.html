@@ -7,7 +7,7 @@
      Textos: i18n/de.json, en.json, fr.json, it.json
      Datos:  data.json
      Estilo: style.css -->
-<title>Ferienwohnung Valle Maggia – Casa Cevio | Cevio, Tessin</title>
+<title>Ferienwohnung Valle Maggia – Casa Lele | Cevio, Tessin</title>
 <meta name="description" content="Zwei Ferienwohnungen in Cevio im Valle Maggia, Tessin. Baden in der Maggia, Wasserfälle, Kastanienwälder. Direkt buchen, ohne Provision.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://casacevio.ch/index.html">
@@ -19,23 +19,299 @@
 <meta name="theme-color" content="#f5e9e1">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_CH">
-<meta property="og:site_name" content="Casa Cevio">
-<meta property="og:title" content="Ferienwohnung Valle Maggia – Casa Cevio | Cevio, Tessin">
+<meta property="og:site_name" content="Casa Lele">
+<meta property="og:title" content="Ferienwohnung Valle Maggia – Casa Lele | Cevio, Tessin">
 <meta property="og:description" content="Zwei Ferienwohnungen in Cevio im Valle Maggia, Tessin. Baden in der Maggia, Wasserfälle, Kastanienwälder. Direkt buchen, ohne Provision.">
 <meta property="og:url" content="https://casacevio.ch/index.html">
-<meta property="og:image" content="https://casacevio.ch/og.jpg">
+<meta property="og:image" content="https://casacevio.ch/fotos/terrasse-aperitivo-1600.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+/* ===== CASA CEVIO — hoja de estilos compartida por los 4 idiomas ========= */
+:root{
+  --blush:#F5E9E1; --blush-lt:#FBF4EF; --card:#FFFCFA;
+  --ink:#3B2E29; --ink-2:#7A675E;
+  --accent:#B5714C; --accent-dk:#8E5334;
+  --dark:#2E2521; --line:#E7D3C6; --gold:#D9A442;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+  --r:22px; --r-sm:14px; --sh:0 4px 24px rgba(59,46,41,.08);
+  --wrap:1200px; --gut:clamp(20px,5vw,44px); --sp:clamp(62px,8vw,110px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--blush);color:var(--ink);font:300 17px/1.7 var(--sans);text-underline-offset:3px}
+img{max-width:100%;display:block;height:auto}
+a{color:var(--accent)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;margin:0;letter-spacing:.005em}
+h1{font-size:clamp(2.5rem,6.2vw,4.3rem);line-height:1.05;font-weight:400}
+h2{font-size:clamp(1.95rem,4.2vw,3rem);line-height:1.15}
+h3{font-size:clamp(1.35rem,2.4vw,1.75rem);line-height:1.25}
+p{margin:0 0 1em}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.sec{padding-block:var(--sp)}
+.sec--lt{background:var(--blush-lt)}
+.sec--dark{background:var(--dark);color:var(--blush)}
+.sec--dark h2,.sec--dark h3{color:#fff}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:10px 16px;border-radius:8px}
+.eyebrow{font:500 13px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+.sec--dark .eyebrow{color:#E0A87F}
+.lede{font-size:clamp(1.06rem,1.5vw,1.2rem);color:var(--ink-2);max-width:60ch;margin-bottom:0}
+.sec--dark .lede{color:#D9C8BE}
+
+/* botones */
+.btn{display:inline-block;font:500 15px/1 var(--sans);letter-spacing:.02em;padding:17px 32px;
+  border-radius:999px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;
+  text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s}
+.btn:hover{background:var(--accent-dk);border-color:var(--accent-dk);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn--ghost:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn--light{background:#fff;color:var(--accent);border-color:#fff}
+.btn--light:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.arrow{font:500 15px var(--sans);color:var(--accent);text-decoration:none}
+.arrow:hover{text-decoration:underline}
+
+/* placeholders de foto */
+.ph{position:relative;display:grid;place-items:center;overflow:hidden;
+  background:linear-gradient(150deg,#EADACF,#D8C2B4);color:#6B564B;object-fit:cover;width:100%}
+.ph span{font:400 12px/1.4 var(--sans);letter-spacing:.05em;text-align:center;padding:7px 12px;
+  background:rgba(255,252,250,.85);border-radius:8px;max-width:86%}
+.r4x3{aspect-ratio:4/3}.r16x9{aspect-ratio:16/9}.r1x1{aspect-ratio:1/1}.r3x4{aspect-ratio:3/4}
+
+/* cabecera + conmutador de idioma */
+.hdr{position:sticky;top:0;z-index:60;background:rgba(245,233,225,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line)}
+.hdr__in{display:flex;align-items:center;gap:18px;min-height:74px;max-width:var(--wrap);
+  margin-inline:auto;padding-inline:var(--gut)}
+.brand{font-family:var(--serif);font-size:1.5rem;font-weight:500;text-decoration:none;color:var(--ink);
+  white-space:nowrap;line-height:1}
+.brand em{font-style:italic;color:var(--accent)}
+.nav{display:flex;gap:22px;margin-left:auto;align-items:center}
+.nav a{font:400 15px var(--sans);text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav a:hover{color:var(--accent)}
+.hdr .btn{padding:13px 24px;font-size:14px}
+.langs{display:flex;gap:2px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:3px}
+.langs a{font:500 12.5px var(--sans);letter-spacing:.06em;text-decoration:none;color:var(--ink-2);
+  padding:7px 11px;border-radius:999px;line-height:1}
+.langs a:hover{color:var(--accent)}
+.langs a[aria-current="true"]{background:var(--accent);color:#fff}
+.burger{display:none;margin-left:auto;background:transparent;border:1.5px solid var(--line);
+  border-radius:999px;padding:11px 20px;font:500 14px var(--sans);color:var(--ink);cursor:pointer}
+@media (max-width:1060px){
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
+    gap:0;background:var(--blush);border-bottom:1px solid var(--line);padding:6px var(--gut) 22px}
+  .nav[data-open="true"]{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
+  .nav .btn{margin-top:16px;text-align:center;border-bottom:none}
+  .nav .langs{margin-top:16px;justify-content:center;align-self:center}
+  .nav .langs a{border-bottom:none;padding:9px 14px;font-size:14px}
+  .burger{display:block}
+  .hdr__in > .btn,.hdr__in > .langs{display:none}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden}
+.hero__media{position:absolute;inset:0}
+.hero__media .ph,.hero__media img{width:100%;height:100%;aspect-ratio:auto;border-radius:0}
+.hero__media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(46,37,33,.28) 0,rgba(46,37,33,.5) 42%,rgba(46,37,33,.86) 100%)}
+.hero__in{position:relative;max-width:var(--wrap);margin-inline:auto;
+  padding:clamp(120px,22vh,230px) var(--gut) clamp(52px,7vw,80px);color:#fff}
+.hero .eyebrow{color:#EBBE9A}
+.hero h1{color:#fff;max-width:20ch}
+.hero__p{color:#EADED6;max-width:56ch;margin-top:22px;font-size:clamp(1.04rem,1.5vw,1.2rem)}
+.hero .btn--ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+.hero .btn--ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+@media (prefers-reduced-motion:no-preference){
+  .hero .eyebrow,.hero h1,.hero__p,.hero .btns,.hero__social{animation:rise .85s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1{animation-delay:.07s}.hero__p{animation-delay:.15s}
+  .hero .btns{animation-delay:.23s}.hero__social{animation-delay:.31s}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
+.hero__social{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:38px}
+.rating{display:flex;align-items:baseline;gap:9px;font-size:14.5px;color:#EADED6}
+.rating b{color:#fff;font-weight:600;font-size:16px}
+.stars{color:var(--gold);letter-spacing:2px;font-style:normal}
+.minq{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:#fff;margin:0}
+.minq small{display:block;font-family:var(--sans);font-style:normal;font-size:12.5px;color:#C9B4A8;
+  margin-top:3px;letter-spacing:.04em}
+
+/* tour */
+.tour{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:44px}
+.tour figure{margin:0}
+.tour a{display:block;position:relative;text-decoration:none;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.tour .play{position:absolute;inset:0;display:grid;place-items:center}
+.tour .play span{width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.94);display:grid;
+  place-items:center;font-size:22px;color:var(--accent);box-shadow:0 6px 22px rgba(46,37,33,.28);transition:transform .2s}
+.tour a:hover .play span{transform:scale(1.07)}
+.tour figcaption{margin-top:18px;font-size:15.5px;color:var(--ink-2)}
+.tour figcaption b{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:500;color:var(--ink);margin-bottom:5px}
+.tour figcaption .arrow{display:inline-block;margin-top:10px}
+
+/* apartamentos */
+.flats{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:30px;margin-top:46px}
+.flat{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;
+  flex-direction:column;transition:transform .25s,box-shadow .25s}
+.flat:hover{transform:translateY(-4px);box-shadow:0 12px 34px rgba(59,46,41,.14)}
+.flat__img{position:relative}
+.flat__img .ph,.flat__img img{border-radius:0}
+.badge{position:absolute;top:16px;left:16px;background:rgba(255,252,250,.94);border-radius:999px;
+  padding:8px 16px;font:500 13px var(--sans);color:var(--ink);box-shadow:0 2px 10px rgba(46,37,33,.14)}
+.flat__body{padding:28px 28px 30px;display:flex;flex-direction:column;flex:1}
+.flat__place{font:400 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin:0 0 8px}
+.flat__body h3{margin-bottom:10px}
+.flat__body > p{color:var(--ink-2);font-size:15.6px}
+.specs{list-style:none;padding:0;margin:4px 0 20px;border-top:1px solid var(--line)}
+.specs li{display:flex;justify-content:space-between;gap:14px;padding:10px 0;border-bottom:1px solid var(--line);
+  font-size:14.8px;color:var(--ink-2)}
+.specs b{font-weight:500;color:var(--ink)}
+.price{margin:auto 0 4px;font-family:var(--serif);font-size:1.5rem;color:var(--ink)}
+.price small{display:block;font-family:var(--sans);font-size:13px;color:var(--ink-2);margin-top:6px}
+.flat .btn{margin-top:20px;text-align:center}
+.whole{margin-top:30px;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);
+  display:grid;grid-template-columns:1fr 1.15fr;align-items:center}
+.whole .ph,.whole img{height:100%;aspect-ratio:auto;min-height:300px;border-radius:0}
+.whole__txt{padding:clamp(28px,4vw,52px)}
+.whole__txt p{color:var(--ink-2);font-size:15.8px}
+@media (max-width:860px){.whole{grid-template-columns:1fr}.whole .ph,.whole img{min-height:210px}}
+
+/* bandas CTA */
+.band{background:var(--accent);color:#fff;text-align:center;padding:clamp(48px,6vw,72px) var(--gut)}
+.band p{font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.25rem);line-height:1.25;margin:0 auto 26px;
+  max-width:26ch;color:#fff}
+
+/* ventajas */
+.perks{list-style:none;padding:0;margin:42px 0 0;display:grid;gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.perks li{display:flex;gap:15px;align-items:flex-start;background:var(--card);border-radius:var(--r-sm);
+  padding:22px;font-size:15.6px;box-shadow:var(--sh)}
+.sec--dark .perks li{background:rgba(255,255,255,.06);box-shadow:none}
+.perks .ico{font-size:22px;line-height:1.2;flex:none}
+
+/* para quien */
+.who{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:44px}
+.who article{background:var(--card);border-radius:var(--r);padding:34px 30px;box-shadow:var(--sh)}
+.who .ico{font-size:34px;display:block;margin-bottom:14px}
+.who h3{margin-bottom:10px}
+.who p{color:var(--ink-2);font-size:15.6px;margin:0}
+.notes{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:24px}
+.note{display:flex;gap:14px;align-items:center;background:rgba(181,113,76,.09);border:1px solid var(--line);
+  border-radius:var(--r-sm);padding:18px 20px;font-size:15px}
+.note .ico{font-size:24px;flex:none}
+.note b{display:block;font-weight:500}
+.note small{color:var(--ink-2);font-size:13.5px}
+
+/* temporadas */
+.seasons{display:grid;gap:clamp(30px,4.5vw,44px);margin-top:46px;
+  grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.season > .ph,.season > img{border-radius:var(--r);box-shadow:var(--sh)}
+.season h3{margin:26px 0 12px}
+.season ul{padding-left:1.15em;margin:0;font-size:15.6px;color:var(--ink-2)}
+.season li{margin-bottom:10px}
+.sec--dark .season ul{color:#D9C8BE}
+
+/* region */
+.why{display:grid;gap:clamp(28px,4.5vw,52px);grid-template-columns:1.1fr .9fr;align-items:center;margin-top:44px}
+@media (max-width:880px){.why{grid-template-columns:1fr}}
+.why dl{margin:0}
+.why dt{font-family:var(--serif);font-size:1.3rem;font-weight:500;margin-top:24px}
+.why dt:first-child{margin-top:0}
+.why dd{margin:6px 0 0;color:var(--ink-2);font-size:15.6px;max-width:54ch}
+.why > .ph,.why > img{border-radius:var(--r);box-shadow:var(--sh)}
+.gal{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:52px}
+.gal figure{margin:0}
+.gal .ph,.gal img{border-radius:var(--r-sm);box-shadow:var(--sh)}
+.gal figcaption{margin-top:10px;font-size:13.6px;color:var(--ink-2);line-height:1.45}
+.credit{font-size:13px;color:var(--ink-2);margin-top:22px}
+
+/* ubicacion */
+.loc{display:grid;gap:clamp(26px,4vw,44px);grid-template-columns:1.2fr .8fr;margin-top:44px}
+@media (max-width:880px){.loc{grid-template-columns:1fr}}
+.loc iframe{width:100%;height:420px;border:1px solid var(--line);border-radius:var(--r);filter:saturate(.85)}
+.dist{list-style:none;padding:0;margin:0 0 26px}
+.dist li{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15.2px}
+.dist b{min-width:80px;font-weight:500}
+address{font-style:normal;font-size:15.6px;line-height:1.75;color:var(--ink-2)}
+address strong{color:var(--ink);font-weight:500}
+
+/* sobre nosotros */
+.about{display:grid;gap:clamp(28px,4.5vw,54px);grid-template-columns:.85fr 1.15fr;align-items:center}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about > .ph,.about > img{border-radius:var(--r);box-shadow:var(--sh)}
+.about p{color:var(--ink-2)}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.35;
+  color:var(--ink);margin:28px 0 0;max-width:34ch}
+
+/* resenas */
+.revs{columns:3 310px;column-gap:24px;margin-top:42px}
+.rev{break-inside:avoid;margin:0 0 24px;padding:26px;background:var(--card);border-radius:var(--r);box-shadow:var(--sh)}
+.rev p{font-size:15.5px;margin:12px 0 14px;color:var(--ink-2)}
+.rev footer{font-size:13.6px;color:var(--ink-2)}
+.rev footer b{display:block;color:var(--ink);font-weight:500;font-size:15px}
+
+/* partners */
+.partners{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:40px}
+.partners div{background:var(--card);border-radius:var(--r-sm);padding:22px;box-shadow:var(--sh)}
+.partners b{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:500}
+.partners small{color:var(--ink-2);font-size:13.6px}
+
+/* faq */
+.faq{margin-top:40px;max-width:880px}
+.faq details{background:var(--card);border-radius:var(--r-sm);box-shadow:var(--sh);margin-bottom:14px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:22px 56px 22px 26px;position:relative;
+  font:500 17px var(--sans);color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:24px;top:18px;font-size:26px;color:var(--accent);line-height:1}
+.faq details[open] summary::after{content:"\2013"}
+.faq .ans{padding:0 26px 26px;color:var(--ink-2);font-size:15.8px}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* contacto */
+.contact{display:grid;gap:clamp(26px,4.5vw,50px);grid-template-columns:1.05fr .95fr;margin-top:44px}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+label{display:block;font:500 13.5px var(--sans);letter-spacing:.04em;margin:0 0 8px}
+input,textarea{width:100%;padding:15px 18px;font:300 16px var(--sans);border-radius:var(--r-sm);
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:var(--blush)}
+input::placeholder,textarea::placeholder{color:#B49E91}
+.field{margin-bottom:18px}
+.formnote{font-size:13px;color:#C0ABA0;margin-top:14px}
+.direct{list-style:none;padding:0;margin:24px 0 0}
+.direct li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:15.6px}
+.direct a{color:#EBBE9A;text-decoration:none}
+.direct a:hover{text-decoration:underline}
+
+/* footer */
+.ft{background:var(--dark);color:#C9B4A8;padding:clamp(54px,7vw,84px) 0 30px;font-size:14.8px}
+.ft__cols{display:grid;gap:38px;grid-template-columns:1.5fr 1fr 1fr 1fr}
+@media (max-width:860px){.ft__cols{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.ft__cols{grid-template-columns:1fr}}
+.ft h4{margin:0 0 14px;font:500 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.ft .brand{color:#fff;font-size:1.6rem}
+.ft a{color:#C9B4A8;text-decoration:none;display:block;padding:5px 0}
+.ft a:hover{color:#fff;text-decoration:underline}
+.ft__btm{margin-top:50px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:13px}
+
+
+@media (min-width:1061px){
+  .nav > .langs,.nav > .btn{display:none}
+}
+
+picture{display:block}
+.hero__media picture,.whole picture{height:100%}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 
 <header class="hdr">
   <div class="hdr__in">
-    <a class="brand" href="#top">Casa <em>Cevio</em></a>
+    <a class="brand" href="#top">Casa <em>Lele</em></a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menü</button>
     <nav class="nav" id="nav">
       <a href="#wohnungen">Wohnungen</a>
@@ -57,15 +333,15 @@
 <section class="hero" id="top">
   <div class="hero__media">
     <!-- FOTO PRINCIPAL. Minimo 2400 px de ancho. -->
-    <div class="ph"><span>Foto Hero — Haus oder Blick ins Valle Maggia</span></div>
+    <picture><source type="image/webp" srcset="fotos/terrasse-aperitivo-640.webp 640w, fotos/terrasse-aperitivo-1024.webp 1024w, fotos/terrasse-aperitivo-1600.webp 1600w, fotos/terrasse-aperitivo-2400.webp 2400w" sizes="100vw"><img class="ph" src="fotos/terrasse-aperitivo-2400.jpg" srcset="fotos/terrasse-aperitivo-640.jpg 640w, fotos/terrasse-aperitivo-1024.jpg 1024w, fotos/terrasse-aperitivo-1600.jpg 1600w, fotos/terrasse-aperitivo-2400.jpg 2400w" sizes="100vw" alt="Apéro auf der gemeinsamen Terrasse der Casa Lele, mit Blick ins Valle Maggia" width="2400" height="1800" loading="eager" fetchpriority="high" decoding="async"></picture>
   </div>
   <div class="hero__in">
     <p class="eyebrow">Valle Maggia · Tessin</p>
     <h1>Zwei Ferienwohnungen im Valle Maggia, direkt buchen</h1>
     <p class="hero__p">Baden in den Felsbecken der Maggia, der Wasserfall von Foroglio, Kastanienwälder im Herbst: zwei Wohnungen aus Granit mitten in Cevio, eine halbe Stunde hinter Locarno. Direkt und ohne Provision buchen.</p>
     <div class="btns">
-      <a class="btn" href="#wohnung-1">Bavona</a>
-      <a class="btn btn--ghost" href="#wohnung-2">Rovana</a>
+      <a class="btn" href="#wohnung-1">Sole</a>
+      <a class="btn btn--ghost" href="#wohnung-2">Luna</a>
       <a class="btn btn--ghost" href="#ganzes-haus">Das ganze Haus</a>
     </div>
     <div class="hero__social">
@@ -84,18 +360,18 @@
     <div class="tour">
       <figure>
         <a href="#">
-          <div class="ph r16x9"><span>Video-Standbild Bavona</span></div>
+          <div class="ph r16x9"><span>Video-Standbild Sole</span></div>
           <div class="play"><span>▶</span></div>
         </a>
-        <figcaption><b>Bavona</b>Die gemütlichere der beiden, mit Balkon nach Süden.
+        <figcaption><b>Sole</b>Die grössere der beiden, mit Platz für vier.
           <a class="arrow" href="#wohnung-1">Zur Wohnung →</a></figcaption>
       </figure>
       <figure>
         <a href="#">
-          <div class="ph r16x9"><span>Video-Standbild Rovana</span></div>
+          <div class="ph r16x9"><span>Video-Standbild Luna</span></div>
           <div class="play"><span>▶</span></div>
         </a>
-        <figcaption><b>Rovana</b>Die grosse Wohnung, mit eigenem Sitzplatz im Freien.
+        <figcaption><b>Luna</b>Die kleinere Wohnung, für zwei.
           <a class="arrow" href="#wohnung-2">Zur Wohnung →</a></figcaption>
       </figure>
     </div>
@@ -106,63 +382,91 @@
   <div class="wrap">
     <p class="eyebrow">Unsere Wohnungen</p>
     <h2>Zwei Wohnungen, ein Haus aus Granit</h2>
-    <p class="lede">Beide im selben Haus im Dorfkern von Cevio: einzeln für ein Paar oder eine Familie, zusammen für die grosse Gruppe.</p>
+    <p class="lede">Beide im selben Haus am sonnigen Dorfrand von Cevio: einzeln für ein Paar oder eine Familie, zusammen für die grosse Gruppe. Dazu eine gemeinsame Terrasse von 31,5 m², möbliert und mit Elektrogrill.</p>
     <div class="flats">
       <article class="flat" id="wohnung-1">
         <div class="flat__img">
-          <div class="ph r4x3"><span>Wohnzimmer Bavona</span></div>
-          <span class="badge">👥 bis _ Gäste</span>
+          <picture><source type="image/webp" srcset="fotos/sole-essplatz-balkon-640.webp 640w, fotos/sole-essplatz-balkon-1024.webp 1024w, fotos/sole-essplatz-balkon-1600.webp 1600w" sizes="(max-width:860px) 100vw, 46vw"><img class="ph r4x3" src="fotos/sole-essplatz-balkon-1600.jpg" srcset="fotos/sole-essplatz-balkon-640.jpg 640w, fotos/sole-essplatz-balkon-1024.jpg 1024w, fotos/sole-essplatz-balkon-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 46vw" alt="Essplatz am Balkon mit Blick ins Tal, Casa Lele – Sole" width="1600" height="1200" loading="lazy" decoding="async"></picture>
+          <span class="badge">👥 bis 4 Gäste</span>
         </div>
         <div class="flat__body">
           <p class="flat__place">Cevio · Valle Maggia</p>
-          <h3>Bavona</h3>
-          <p>Dicke Granitmauern, Holzboden und ein Balkon nach Süden, auf dem der ganze Tag Platz hat. </p>
+          <h3>Casa Lele – Sole</h3>
+          <p>Im ersten Obergeschoss. Dicke Granitmauern und Holzboden: die grössere der beiden, mit einem Schlafzimmer, einem Schlafsofa im Wohnraum und Platz für vier.</p>
           <ul class="specs">
-            <li><b>Grösse</b><span>__ m², _ Schlafzimmer</span></li>
-            <li><b>Betten</b><span>__</span></li>
-            <li><b>Bad</b><span>__</span></li>
-            <li><b>Küche</b><span>Voll ausgestattet, Geschirrspüler, Fondue-Set</span></li>
-            <li><b>Aussen</b><span>__</span></li>
+            <li><b>Grösse</b><span>57,8 m², 1 Schlafzimmer</span></li>
+            <li><b>Betten</b><span>1 Doppelbett, 1 Schlafsofa</span></li>
+            <li><b>Bad</b><span>1 Badezimmer mit Dusche</span></li>
+            <li><b>Küche</b><span>Voll ausgestattet, Induktionsherd, Geschirrspüler</span></li>
+            <li><b>Heizung</b><span>Fussbodenheizung</span></li>
+            <li><b>Aussen</b><span>Panoramabalkon mit Blick ins Tal</span></li>
           </ul>
-          <p class="price">ab CHF ___ / Nacht
-            <small>zzgl. Reinigung CHF __ & Kurtaxe CHF _ p. P./Nacht</small></p>
+          <p class="price">ab CHF 140 / Nacht
+            <small>zzgl. Reinigung CHF 140 & Kurtaxe CHF 2 p. P./Nacht</small></p>
           <a class="btn" href="#kontakt">Ansehen & buchen →</a>
         </div>
       </article>
       <article class="flat" id="wohnung-2">
         <div class="flat__img">
-          <div class="ph r4x3"><span>Wohnzimmer Rovana</span></div>
-          <span class="badge">👥 bis _ Gäste</span>
+          <picture><source type="image/webp" srcset="fotos/luna-wohnraum-640.webp 640w, fotos/luna-wohnraum-1024.webp 1024w, fotos/luna-wohnraum-1600.webp 1600w" sizes="(max-width:860px) 100vw, 46vw"><img class="ph r4x3" src="fotos/luna-wohnraum-1600.jpg" srcset="fotos/luna-wohnraum-640.jpg 640w, fotos/luna-wohnraum-1024.jpg 1024w, fotos/luna-wohnraum-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 46vw" alt="Wohnraum mit Küche, Casa Lele – Luna" width="1600" height="1200" loading="lazy" decoding="async"></picture>
+          <span class="badge">👥 bis 2 Gäste</span>
         </div>
         <div class="flat__body">
           <p class="flat__place">Cevio · Valle Maggia</p>
-          <h3>Rovana</h3>
-          <p>Die grössere der beiden, mit eigenem Sitzplatz im Freien und Platz für eine Familie oder zwei Paare. </p>
+          <h3>Casa Lele – Luna</h3>
+          <p>Im Erdgeschoss. Die kleinere Wohnung, für zwei: Schlafzimmer, Wohnraum mit Küche und Bad mit Dusche.</p>
           <ul class="specs">
-            <li><b>Grösse</b><span>__ m², _ Schlafzimmer</span></li>
-            <li><b>Betten</b><span>__</span></li>
-            <li><b>Bad</b><span>__</span></li>
-            <li><b>Küche</b><span>Voll ausgestattet, Geschirrspüler, Fondue-Set</span></li>
-            <li><b>Aussen</b><span>__</span></li>
+            <li><b>Grösse</b><span>33,4 m², 1 Schlafzimmer</span></li>
+            <li><b>Betten</b><span>1 Doppelbett</span></li>
+            <li><b>Bad</b><span>1 Badezimmer mit Dusche</span></li>
+            <li><b>Küche</b><span>Voll ausgestattet, Induktionsherd, Geschirrspüler, Waschmaschine</span></li>
+            <li><b>Heizung</b><span>Fussbodenheizung</span></li>
+            <li><b>Aussen</b><span>Private Terrasse, 8,9 m², möbliert</span></li>
           </ul>
-          <p class="price">ab CHF ___ / Nacht
-            <small>zzgl. Reinigung CHF __ & Kurtaxe CHF _ p. P./Nacht</small></p>
+          <p class="price">ab CHF 120 / Nacht
+            <small>zzgl. Reinigung CHF 140 & Kurtaxe CHF 2 p. P./Nacht</small></p>
           <a class="btn" href="#kontakt">Ansehen & buchen →</a>
         </div>
       </article>
     </div>
     <div class="whole" id="ganzes-haus">
-      <div class="ph"><span>Foto: Haus von aussen</span></div>
+      <picture><source type="image/webp" srcset="fotos/terrasse-gemeinsam-640.webp 640w, fotos/terrasse-gemeinsam-1024.webp 1024w, fotos/terrasse-gemeinsam-1600.webp 1600w" sizes="(max-width:860px) 100vw, 45vw"><img class="ph" src="fotos/terrasse-gemeinsam-1600.jpg" srcset="fotos/terrasse-gemeinsam-640.jpg 640w, fotos/terrasse-gemeinsam-1024.jpg 1024w, fotos/terrasse-gemeinsam-1600.jpg 1600w" sizes="(max-width:860px) 100vw, 45vw" alt="Die gemeinsame Terrasse mit Granittisch und Blick ins Tal" width="1600" height="1200" loading="lazy" decoding="async"></picture>
       <div class="whole__txt">
         <p class="eyebrow">Für grössere Gruppen</p>
         <h3>Das ganze Haus buchen</h3>
-        <p>Familientreffen, Wandergruppe oder zwei Familien zusammen? Buch beide Wohnungen gemeinsam, bis __ Gäste, mit dem Aussenbereich und dem Parkplatz für alle.</p>
-        <p class="price">ab CHF ___ / Nacht
+        <p>Familientreffen, Wandergruppe oder zwei Familien zusammen? Buch beide Wohnungen gemeinsam, bis 6 Gäste, mit der gemeinsamen Terrasse von 31,5 m², dem Elektrogrill und dem Parkplatz für alle.</p>
+        <p class="price">ab CHF 260 / Nacht
           <small>zzgl. Reinigung & Kurtaxe</small></p>
         <div class="btns"><a class="btn" href="#kontakt">Ganzes Haus anfragen →</a></div>
       </div>
     </div>
-  </div>
+  
+    <h3 style="margin-top:56px">Das Haus und die gemeinsame Terrasse</h3>
+    <div class="gal">
+      <figure><picture><source type="image/webp" srcset="fotos/terrasse-panorama-640.webp 640w, fotos/terrasse-panorama-1024.webp 1024w, fotos/terrasse-panorama-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/terrasse-panorama-1600.jpg" srcset="fotos/terrasse-panorama-640.jpg 640w, fotos/terrasse-panorama-1024.jpg 1024w, fotos/terrasse-panorama-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Die gemeinsame Terrasse von oben, mit Grillplatz und Sitzplätzen" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Die gemeinsame Terrasse von oben, mit Grillplatz und Sitzplätzen</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/rovana-brunnen-640.webp 640w, fotos/rovana-brunnen-1024.webp 1024w, fotos/rovana-brunnen-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/rovana-brunnen-1600.jpg" srcset="fotos/rovana-brunnen-640.jpg 640w, fotos/rovana-brunnen-1024.jpg 1024w, fotos/rovana-brunnen-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Der Granitbrunnen im Quartier Rovana" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Der Granitbrunnen im Quartier Rovana</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/haltestelle-rovana-640.webp 640w, fotos/haltestelle-rovana-1024.webp 1024w, fotos/haltestelle-rovana-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/haltestelle-rovana-1600.jpg" srcset="fotos/haltestelle-rovana-640.jpg 640w, fotos/haltestelle-rovana-1024.jpg 1024w, fotos/haltestelle-rovana-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Postauto-Haltestelle Rovana, Linie 331 nach Bosco Gurin" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Postauto-Haltestelle Rovana, Linie 331 nach Bosco Gurin</figcaption></figure>
+    </div>
+    <h3 style="margin-top:56px">Casa Lele – Sole in Bildern</h3>
+    <div class="gal">
+      <figure><picture><source type="image/webp" srcset="fotos/sole-wohnraum-640.webp 640w, fotos/sole-wohnraum-1024.webp 1024w, fotos/sole-wohnraum-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/sole-wohnraum-1600.jpg" srcset="fotos/sole-wohnraum-640.jpg 640w, fotos/sole-wohnraum-1024.jpg 1024w, fotos/sole-wohnraum-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Wohnraum mit Schlafsofa und Sessel" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Wohnraum mit Schlafsofa und Sessel</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/sole-wohnbereich-640.webp 640w, fotos/sole-wohnbereich-1024.webp 1024w, fotos/sole-wohnbereich-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/sole-wohnbereich-1600.jpg" srcset="fotos/sole-wohnbereich-640.jpg 640w, fotos/sole-wohnbereich-1024.jpg 1024w, fotos/sole-wohnbereich-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Wohnbereich mit Balkontür" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Wohnbereich mit Balkontür</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/sole-kueche-640.webp 640w, fotos/sole-kueche-1001.webp 1001w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/sole-kueche-1001.jpg" srcset="fotos/sole-kueche-640.jpg 640w, fotos/sole-kueche-1001.jpg 1001w" sizes="(max-width:700px) 100vw, 300px" alt="Küche mit Induktion und Backofen" width="1001" height="667" loading="lazy" decoding="async"></picture><figcaption>Küche mit Induktion und Backofen</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/sole-schlafzimmer-640.webp 640w, fotos/sole-schlafzimmer-1024.webp 1024w, fotos/sole-schlafzimmer-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/sole-schlafzimmer-1600.jpg" srcset="fotos/sole-schlafzimmer-640.jpg 640w, fotos/sole-schlafzimmer-1024.jpg 1024w, fotos/sole-schlafzimmer-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Schlafzimmer mit Doppelbett" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Schlafzimmer mit Doppelbett</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/sole-schlafzimmer-2-640.webp 640w, fotos/sole-schlafzimmer-2-1024.webp 1024w, fotos/sole-schlafzimmer-2-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/sole-schlafzimmer-2-1600.jpg" srcset="fotos/sole-schlafzimmer-2-640.jpg 640w, fotos/sole-schlafzimmer-2-1024.jpg 1024w, fotos/sole-schlafzimmer-2-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Schlafzimmer mit direktem Zugang zum Bad" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Schlafzimmer mit direktem Zugang zum Bad</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/sole-bad-640.webp 640w, fotos/sole-bad-1024.webp 1024w, fotos/sole-bad-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/sole-bad-1600.jpg" srcset="fotos/sole-bad-640.jpg 640w, fotos/sole-bad-1024.jpg 1024w, fotos/sole-bad-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Bad mit Dusche" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Bad mit Dusche</figcaption></figure>
+    </div>
+    <h3 style="margin-top:56px">Casa Lele – Luna in Bildern</h3>
+    <div class="gal">
+      <figure><picture><source type="image/webp" srcset="fotos/luna-essplatz-640.webp 640w, fotos/luna-essplatz-1024.webp 1024w, fotos/luna-essplatz-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/luna-essplatz-1600.jpg" srcset="fotos/luna-essplatz-640.jpg 640w, fotos/luna-essplatz-1024.jpg 1024w, fotos/luna-essplatz-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Wohnraum mit Essplatz und Schlafsofa" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Wohnraum mit Essplatz und Schlafsofa</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/luna-kueche-640.webp 640w, fotos/luna-kueche-1024.webp 1024w, fotos/luna-kueche-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/luna-kueche-1600.jpg" srcset="fotos/luna-kueche-640.jpg 640w, fotos/luna-kueche-1024.jpg 1024w, fotos/luna-kueche-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Küche mit Induktion, Kühlschrank und Essplatz" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Küche mit Induktion, Kühlschrank und Essplatz</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/luna-fruehstueck-640.webp 640w, fotos/luna-fruehstueck-1024.webp 1024w, fotos/luna-fruehstueck-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/luna-fruehstueck-1600.jpg" srcset="fotos/luna-fruehstueck-640.jpg 640w, fotos/luna-fruehstueck-1024.jpg 1024w, fotos/luna-fruehstueck-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Frühstück mit offener Tür zur Terrasse" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Frühstück mit offener Tür zur Terrasse</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/luna-schlafzimmer-640.webp 640w, fotos/luna-schlafzimmer-1024.webp 1024w, fotos/luna-schlafzimmer-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/luna-schlafzimmer-1600.jpg" srcset="fotos/luna-schlafzimmer-640.jpg 640w, fotos/luna-schlafzimmer-1024.jpg 1024w, fotos/luna-schlafzimmer-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Schlafzimmer mit Doppelbett" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Schlafzimmer mit Doppelbett</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/luna-bad-640.webp 640w, fotos/luna-bad-1000.webp 1000w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/luna-bad-1000.jpg" srcset="fotos/luna-bad-640.jpg 640w, fotos/luna-bad-1000.jpg 1000w" sizes="(max-width:700px) 100vw, 300px" alt="Bad mit Dusche" width="1000" height="665" loading="lazy" decoding="async"></picture><figcaption>Bad mit Dusche</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/luna-terrasse-640.webp 640w, fotos/luna-terrasse-1024.webp 1024w, fotos/luna-terrasse-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/luna-terrasse-1600.jpg" srcset="fotos/luna-terrasse-640.jpg 640w, fotos/luna-terrasse-1024.jpg 1024w, fotos/luna-terrasse-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Private Terrasse, 8,9 m², möbliert" width="1600" height="1200" loading="lazy" decoding="async"></picture><figcaption>Private Terrasse, 8,9 m², möbliert</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="fotos/valle-maggia-blick-640.webp 640w, fotos/valle-maggia-blick-1024.webp 1024w, fotos/valle-maggia-blick-1600.webp 1600w, fotos/valle-maggia-blick-2400.webp 2400w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/valle-maggia-blick-2400.jpg" srcset="fotos/valle-maggia-blick-640.jpg 640w, fotos/valle-maggia-blick-1024.jpg 1024w, fotos/valle-maggia-blick-1600.jpg 1600w, fotos/valle-maggia-blick-2400.jpg 2400w" sizes="(max-width:700px) 100vw, 300px" alt="Blick ins Valle Maggia von der Terrasse" width="2400" height="1800" loading="lazy" decoding="async"></picture><figcaption>Blick ins Valle Maggia von der Terrasse</figcaption></figure>
+    </div>
+</div>
 </section>
 
 <div class="band">
@@ -177,7 +481,7 @@
     <ul class="perks">
       <li><span class="ico">💰</span><span>Bester Preis, keine Plattform-Gebühren wie bei Airbnb oder Booking.</span></li>
       <li><span class="ico">✓</span><span>Kostenlos stornierbar bis 14 Tage vor Anreise.</span></li>
-      <li><span class="ico">💬</span><span>Direkter Draht zu __, Antwort meist am selben Tag.</span></li>
+      <li><span class="ico">💬</span><span>Direkter Draht zu Adrian und Eleonora, Antwort meist am selben Tag.</span></li>
       <li><span class="ico">🔑</span><span>Selbstständiger Check-in mit Schlüsselkasten, ab 16:00 Uhr.</span></li>
       <li><span class="ico">🔒</span><span>__</span></li>
     </ul>
@@ -189,9 +493,9 @@
     <p class="eyebrow">Für wen?</p>
     <h2>Gemacht für gemeinsame Zeit</h2>
     <div class="who">
-      <article><span class="ico">👨‍👩‍👧‍👦</span><h3>Für Familien</h3><p>Flache Badestellen an der Maggia, der einfache Weg zum Wasserfall von Foroglio und die Seilbahn nach Robiei. In der Wohnung Gesellschaftsspiele und Bücher, Kinderbett und Hochstuhl __.</p></article>
-      <article><span class="ico">🐕</span><h3>Mit Hund</h3><p>__ Die Spazierwege beginnen direkt am Haus, und am Fluss darf er ins Wasser. Klare und faire Regeln, kein Kleingedrucktes.</p></article>
-      <article><span class="ico">💻</span><h3>Zum Arbeiten</h3><p>Glasfaser-WLAN in beiden Wohnungen, Tisch und Stuhl auf Arbeitshöhe, und ein Dorf, in dem es nach 20 Uhr wirklich still ist. Rabatt ab __.</p></article>
+      <article><span class="ico">👨‍👩‍👧‍👦</span><h3>Für Familien</h3><p>Flache Badestellen an der Maggia, der einfache Weg zum Wasserfall von Foroglio und die Seilbahn nach Robiei. In der Wohnung Gesellschaftsspiele und Bücher. Ein Kinderbett steht nicht zur Verfügung.</p></article>
+      <article><span class="ico">🐕</span><h3>Mit Hund</h3><p>Hunde sind willkommen, gegen einen Zuschlag von CHF 30 pro Aufenthalt. Die Spazierwege beginnen direkt am Haus, und am Fluss darf er ins Wasser. Klare und faire Regeln, kein Kleingedrucktes.</p></article>
+      <article><span class="ico">💻</span><h3>Zum Arbeiten</h3><p>Glasfaser-WLAN in beiden Wohnungen, Tisch und Stuhl auf Arbeitshöhe, und ein Dorf, in dem es nach 20 Uhr wirklich still ist. 10 % Rabatt ab 7 Nächten.</p></article>
     </div>
     <div class="notes">
       <div class="note"><span class="ico">🐕</span><span><b>Hund willkommen</b><small>__</small></span></div>
@@ -214,7 +518,7 @@
       <div class="season">
         <div class="ph r4x3"><span>Foto: Kastanienwald im Herbst</span></div>
         <h3>❄️ Herbst & Winter</h3>
-        <ul><li>Kastanienwälder in Gold, Maronen und Polenta in den Grotti der Region.</li><li>Skifahren in Bosco Gurin, dem einzigen deutschsprachigen Dorf im Tessin, rund 30 Minuten entfernt.</li><li>Schneeschuhtouren in den Seitentälern, meist ganz für sich allein.</li><li>Fondue in der Wohnung, das Set gehört dazu.</li><li>Sehr ruhige Wochen und tiefere Preise als im Sommer.</li></ul>
+        <ul><li>Kastanienwälder in Gold, Maronen und Polenta in den Grotti der Region.</li><li>Skifahren in Bosco Gurin, dem einzigen deutschsprachigen Dorf im Tessin, rund 30 Minuten entfernt.</li><li>Schneeschuhtouren in den Seitentälern, meist ganz für sich allein.</li><li>Fussbodenheizung in beiden Wohnungen, warm auch im Januar.</li><li>Sehr ruhige Wochen und tiefere Preise als im Sommer.</li></ul>
       </div>
     </div>
   </div>
@@ -232,7 +536,7 @@
         <dt>Wandern ab der Haustür</dt><dd>Von der gemütlichen Runde am Fluss bis zu den Bergseen von Robiei und dem Lago del Sambuco, alles beginnt im Tal.</dd>
         <dt>Essen wie immer hier</dt><dd>Grotti mit Polenta und Zicklein, Ziegenkäse von den Alpen des Tals und Merlot aus dem Sopraceneri.</dd>
       </dl>
-      <div class="ph r3x4"><span>Foto: Granitdächer von Cevio</span></div>
+      <picture><source type="image/webp" srcset="fotos/haus-rovana-640.webp 640w, fotos/haus-rovana-1024.webp 1024w, fotos/haus-rovana-1200.webp 1200w" sizes="(max-width:880px) 100vw, 340px"><img class="ph r3x4" src="fotos/haus-rovana-1200.jpg" srcset="fotos/haus-rovana-640.jpg 640w, fotos/haus-rovana-1024.jpg 1024w, fotos/haus-rovana-1200.jpg 1200w" sizes="(max-width:880px) 100vw, 340px" alt="Cevio, Rovana: Granitdächer über der Strasse" width="1200" height="1600" loading="lazy" decoding="async"></picture>
     </div>
     <h3 style="margin-top:56px">Das erwartet dich in der Region</h3>
     <div class="gal">
@@ -258,14 +562,14 @@
   <div class="wrap">
     <p class="eyebrow">Standort & Anfahrt</p>
     <h2>So findest du uns</h2>
-    <p class="lede">Cevio ist der Hauptort des Valle Maggia: Laden, Post, Apotheke und Restaurants im Dorf, und von hier öffnen sich alle Seitentäler.</p>
+    <p class="lede">Cevio ist der Hauptort des Valle Maggia: Laden, Post, Apotheke und Restaurants im Dorf, und von hier öffnen sich alle Seitentäler. Das Haus selbst steht auf 419 m am sonnigen Dorfrand, die Wanderwege beginnen vor der Tür.</p>
     <div class="loc">
       <iframe title="Karte Cevio" loading="lazy"
         src="https://www.openstreetmap.org/export/embed.html?bbox=8.591%2C46.311%2C8.615%2C46.322&amp;layer=mapnik&amp;marker=46.3167%2C8.6031"></iframe>
       <div>
         <ul class="dist">
-          <li><b>_ Min.</b><span>Postauto-Haltestelle</span></li>
-          <li><b>5 Min.</b><span>Laden, Post und Restaurants im Dorf</span></li>
+          <li><b>180 m</b><span>Postauto-Haltestelle</span></li>
+          <li><b>1,2 km</b><span>Laden, Supermarkt und Restaurant</span></li>
           <li><b>_ Min.</b><span>zu Fuss an den Fluss Maggia</span></li>
           <li><b>30 Min.</b><span>Val Bavona & Wasserfall Foroglio</span></li>
           <li><b>30 Min.</b><span>Bosco Gurin, Skigebiet</span></li>
@@ -273,7 +577,7 @@
           <li><b>3 Std.</b><span>ab Zürich über den Gotthard</span></li>
           <li><b>2 Std.</b><span>ab Mailand & Malpensa</span></li>
         </ul>
-        <address><strong>Casa Cevio</strong><br>__<br>6675 Cevio<br>Valle Maggia, Kanton Tessin</address>
+        <address><strong>Casa Lele</strong><br>Rovana 32<br>6675 Cevio<br>Valle Maggia, Kanton Tessin</address>
         <div class="btns">
           <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=46.3167,8.6031">In Google Maps öffnen ↗</a>
         </div>
@@ -289,7 +593,7 @@
       <div>
         <p class="eyebrow">Über uns</p>
         <h2>Tessin mit Herz</h2>
-        <p>Hinter Casa Cevio stehen <strong>__</strong>. Wir leben in Zürich und haben dieses Haus im Dorfkern von Cevio ____ übernommen und Stück für Stück hergerichtet: neue Bäder und Küchen, aber Granitmauern und Holzbalken, wie sie immer waren.</p>
+        <p>Hinter Casa Lele stehen <strong>Adrian und Eleonora</strong>. Wir leben in Zürich und haben dieses Haus am sonnigen Dorfrand von Cevio 2018 übernommen und Stück für Stück hergerichtet: neue Bäder und Küchen, aber Granitmauern und Holzbalken, wie sie immer waren. Wir führen die beiden Wohnungen selbst, als Familienbetrieb.</p>
         <p>Wir vermieten nicht anonym. Wenn du schreibst, antwortet einer von uns, und wir sagen dir auch, welche Wanderung zu deinen Kindern passt und wo im August noch eine ruhige Badestelle frei ist. </p>
         <p class="quote">„Kein Hotel. Ein Haus aus Stein, in dem jemand wohnt, wenn du nicht da bist."</p>
       </div>
@@ -334,18 +638,18 @@
     <p class="eyebrow">Gut zu wissen</p>
     <h2>Häufige Fragen</h2>
     <div class="faq">
-      <details open><summary>Kann ich direkt buchen und spare ich damit Gebühren?</summary><div class="ans"><p>Ja. Du fragst über das Formular auf dieser Seite oder per WhatsApp an, wir bestätigen die Verfügbarkeit und schicken dir die Buchung. Es fallen keine Plattformgebühren an. __ Beide Wohnungen sind einzeln buchbar, für grössere Gruppen auch zusammen.</p></div></details>
-      <details><summary>Was kostet eine Übernachtung?</summary><div class="ans"><p>Bavona ab CHF ___ pro Nacht, Rovana ab CHF ___, beide zusammen (bis __ Gäste) ab CHF ___. Dazu kommen die Endreinigung und die Kurtaxe von CHF _ pro Person und Nacht. Im Juli, August und in den Schulferien liegt der Preis höher.</p></div></details>
-      <details><summary>Wie viele Personen haben Platz?</summary><div class="ans"><p>Bavona bis _ Gäste auf __ m² mit _ Schlafzimmern, Rovana bis _ Gäste auf __ m². Zusammen gebucht bis __ Personen. Kinderbett und Hochstuhl __.</p></div></details>
-      <details><summary>Sind Hunde und Haustiere willkommen?</summary><div class="ans"><p>__ __ Sag uns bei der Anfrage einfach Bescheid, dann ist alles vorbereitet. Die Spazierwege beginnen direkt am Haus.</p></div></details>
-      <details><summary>Gibt es Parkplätze?</summary><div class="ans"><p>Ja, kostenlos direkt am Haus. Wer ohne Auto kommt: mit dem Zug bis Locarno und weiter mit dem Postauto bis Cevio, die Haltestelle ist rund _ Gehminuten entfernt.</p></div></details>
+      <details open><summary>Kann ich direkt buchen und spare ich damit Gebühren?</summary><div class="ans"><p>Ja. Du fragst über das Formular auf dieser Seite oder per WhatsApp an, wir bestätigen die Verfügbarkeit und schicken dir die Buchung. Es fallen keine Plattformgebühren an. Bezahlt wird mit Karte bei der Buchung. Beide Wohnungen sind einzeln buchbar, für grössere Gruppen auch zusammen.</p></div></details>
+      <details><summary>Was kostet eine Übernachtung?</summary><div class="ans"><p>Sole ab CHF 140 pro Nacht, Luna ab CHF 120, beide zusammen (bis 6 Gäste) ab CHF 260. Dazu kommen die Endreinigung und die Kurtaxe von CHF 2 pro Person und Nacht. Im Juli, August und in den Schulferien liegt der Preis höher.</p></div></details>
+      <details><summary>Wie viele Personen haben Platz?</summary><div class="ans"><p>Sole bis 4 Gäste auf 57,8 m² mit 1 Schlafzimmer, Luna bis 2 Gäste auf 33,4 m². Zusammen gebucht bis 6 Personen. Ein Kinderbett steht nicht zur Verfügung.</p></div></details>
+      <details><summary>Sind Hunde und Haustiere willkommen?</summary><div class="ans"><p>Ja, Hunde sind erlaubt, gegen einen Zuschlag von CHF 30 pro Aufenthalt. Sag uns bei der Anfrage einfach Bescheid, dann ist alles vorbereitet. Die Spazierwege beginnen direkt am Haus.</p></div></details>
+      <details><summary>Gibt es Parkplätze?</summary><div class="ans"><p>Geparkt wird an der Strasse, rund 180 m vom Haus. Wer ohne Auto kommt: mit dem Zug bis Locarno und weiter mit dem Postauto bis Cevio, die Haltestelle der Linie 331 liegt 180 m vom Haus.</p></div></details>
       <details><summary>Wie komme ich von Zürich nach Cevio?</summary><div class="ans"><p>Mit dem Auto rund 3 Stunden über den Gotthard, dann Bellinzona, Locarno und ins Valle Maggia. Mit dem Zug bis Locarno und ab dort mit dem Postauto. Ab Mailand und Flughafen Malpensa sind es etwa 2 Stunden.</p></div></details>
       <details><summary>Wie funktioniert der Check-in?</summary><div class="ans"><p>Selbstständig mit einem Schlüsselkasten am Haus, du musst also nicht auf einen Schlüssel warten. Anreise ab 16:00 Uhr, Abreise bis 10:00 Uhr. Den Code bekommst du am Tag vor der Anreise.</p></div></details>
       <details><summary>Wo kann man in der Maggia baden?</summary><div class="ans"><p>Der Fluss ist zwischen Bignasco und Ponte Brolla eine Kette von Felsbecken mit klarem, kaltem Wasser. Die nächste Badestelle liegt _ Gehminuten vom Haus. Achtung bei Regen: der Wasserstand kann schnell steigen, und die glatten Granitplatten sind rutschig.</p></div></details>
       <details><summary>Was kann man mit Kindern im Valle Maggia machen?</summary><div class="ans"><p>Baden in der Maggia, der einfache Weg zum Wasserfall von Foroglio, die Seilbahn nach Robiei, das Museo di Valmaggia in Cevio und die Steindörfer der Val Bavona. Bei Regen sind Locarno und Ascona in 30 Minuten erreichbar.</p></div></details>
       <details><summary>Kann man im Winter in der Nähe Ski fahren?</summary><div class="ans"><p>Ja, in Bosco Gurin, rund 30 Autominuten entfernt: ein kleines, familienfreundliches Skigebiet und das einzige deutschsprachige Walserdorf im Tessin. Für Schneeschuhtouren reichen die Wege in den Seitentälern.</p></div></details>
-      <details><summary>Bis wann kann ich kostenlos stornieren?</summary><div class="ans"><p>Bis 14 Tage vor der Anreise ohne Kosten, danach __. Die vollständigen Bedingungen stehen in den Hausregeln.</p></div></details>
-      <details><summary>Wo finde ich eine ruhige Ferienwohnung im Tessin, ohne Touristenmassen?</summary><div class="ans"><p>Im Valle Maggia. Eine halbe Stunde hinter Locarno beginnt ein Tal aus Granit und Kastanienwäldern, mit Badebecken im Fluss, Wasserfällen und Dörfern, in denen nach 20 Uhr wirklich Ruhe ist. Casa Cevio liegt im Dorfkern von Cevio, dem Hauptort des Tals, mit zwei Ferienwohnungen für bis zu __ Gäste, provisionsfrei direkt buchbar.</p></div></details>
+      <details><summary>Bis wann kann ich kostenlos stornieren?</summary><div class="ans"><p>Bis 30 Tage vor der Anreise volle Rückerstattung, bis 7 Tage vorher 50 Prozent. In den letzten 7 Tagen vor der Anreise keine Rückerstattung. Die vollständigen Bedingungen stehen in den Hausregeln.</p></div></details>
+      <details><summary>Wo finde ich eine ruhige Ferienwohnung im Tessin, ohne Touristenmassen?</summary><div class="ans"><p>Im Valle Maggia. Eine halbe Stunde hinter Locarno beginnt ein Tal aus Granit und Kastanienwäldern, mit Badebecken im Fluss, Wasserfällen und Dörfern, in denen nach 20 Uhr wirklich Ruhe ist. Casa Lele liegt am sonnigen Dorfrand von Cevio, dem Hauptort des Tals, mit zwei Ferienwohnungen für bis zu 6 Gäste, provisionsfrei direkt buchbar.</p></div></details>
     </div>
   </div>
 </section>
@@ -372,8 +676,8 @@
         <p style="color:#D9C8BE">Oder schreib uns direkt:</p>
         <ul class="direct">
           <li><a href="mailto:info@casacevio.ch">✉ info@casacevio.ch</a></li>
-          <li><a href="https://wa.me/41_________">WhatsApp +41 __ ___ __ __</a></li>
-          <li>__, 6675 Cevio, Tessin</li>
+          <li><a href="https://wa.me/41765037050">WhatsApp +41 76 503 70 50</a></li>
+          <li>Rovana 32, 6675 Cevio, Tessin</li>
         </ul>
         <p class="formnote">Für eine verbindliche Antwort brauchen wir Daten, Anzahl Gäste und ob ein Hund mitkommt.</p>
       </div>
@@ -387,12 +691,12 @@
   <div class="wrap">
     <div class="ft__cols">
       <div>
-        <a class="brand" href="#top">Casa <em>Cevio</em></a>
+        <a class="brand" href="#top">Casa <em>Lele</em></a>
         <p style="margin-top:14px">Zwei Ferienwohnungen aus Granit in Cevio, im Herzen des Valle Maggia. Das Tessin, wie es hinter Locarno weitergeht.</p>
       </div>
       <div><h4>Kontakt</h4>
         <a href="mailto:info@casacevio.ch">info@casacevio.ch</a>
-        <a href="https://wa.me/41_________">WhatsApp +41 __ ___ __ __</a></div>
+        <a href="https://wa.me/41765037050">WhatsApp +41 76 503 70 50</a></div>
       <div><h4>Adresse</h4>
         <p style="margin:0">__<br>6675 Cevio<br>Kanton Tessin, Schweiz</p></div>
       <div><h4>Links</h4>
@@ -401,7 +705,7 @@
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a></div>
     </div>
-    <p class="ft__btm">© <span id="jahr">2026</span> Casa Cevio · Cevio, Valle Maggia, Schweiz</p>
+    <p class="ft__btm">© <span id="jahr">2026</span> Casa Lele · Cevio, Valle Maggia, Schweiz</p>
   </div>
 </footer>
 
@@ -425,17 +729,18 @@ document.getElementById('anfrage').addEventListener('submit',function(e){
   var body='Name: '+g('name')+'\nE-Mail: '+g('email')+'\n'+
            'Wunschdaten & Anzahl Gäste: '+g('daten')+'\n\n'+g('nachricht');
   window.location.href='mailto:info@casacevio.ch?subject='+
-    encodeURIComponent('Casa Cevio - '+g('name'))+'&body='+encodeURIComponent(body);
+    encodeURIComponent('Casa Lele - '+g('name'))+'&body='+encodeURIComponent(body);
 });
 </script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Casa Cevio",
+{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Casa Lele",
 "description":"Zwei Ferienwohnungen in Cevio im Valle Maggia, Tessin. Baden in der Maggia, Wasserfälle, Kastanienwälder. Direkt buchen, ohne Provision.","url":"https://casacevio.ch/index.html","email":"info@casacevio.ch",
-"telephone":"+41 __ ___ __ __","inLanguage":"de-CH",
-"address":{"@type":"PostalAddress","streetAddress":"__","postalCode":"6675",
+"telephone":"+41 76 503 70 50","inLanguage":"de-CH",
+"address":{"@type":"PostalAddress","streetAddress":"Rovana 32","postalCode":"6675",
 "addressLocality":"Cevio","addressRegion":"TI","addressCountry":"CH"},
 "geo":{"@type":"GeoCoordinates","latitude":46.3167,"longitude":8.6031},
+"image":["https://casacevio.ch/fotos/terrasse-aperitivo-1600.jpg","https://casacevio.ch/fotos/sole-essplatz-balkon-1600.jpg","https://casacevio.ch/fotos/luna-wohnraum-1600.jpg"],
 "petsAllowed":true,"numberOfRooms":2}
 </script>
 </body>
