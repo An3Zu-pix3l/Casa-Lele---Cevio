@@ -132,4 +132,3 @@ protección de datos y reglamento de la casa (los enlaces del pie ya
 apuntan a `impressum.html`, `datenschutz.html` y `hausregeln.html`, que
 dan 404), decidir el dominio, y poner la calle en el pie, donde sale `__`
 en lugar de Rovana 32.
-prueba
