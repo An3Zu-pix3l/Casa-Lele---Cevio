@@ -52,7 +52,7 @@ entera hasta 6 huéspedes desde 260 CHF; limpieza 140 CHF por apartamento;
 tasa turística 2 CHF por persona y noche; pago con tarjeta al reservar;
 cancelación 100 % hasta 30 días antes, 50 % hasta 7 días, después nada;
 perros 30 CHF por estancia; sin cuna; 10 % desde 7 noches; entrada desde
-las 16:00 con caja de llaves, salida hasta las 10:00.
+las 15:00 con caja de llaves, salida hasta las 10:00.
 
 **Distancias**: parada del autopostal Rovana (línea 331) a 180 m;
 aparcamiento en la calle a unos 180 m; tienda, supermercado y restaurante
