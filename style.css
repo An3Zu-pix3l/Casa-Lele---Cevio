@@ -291,8 +291,6 @@ picture{display:block}
 .flat__rating em{font-style:normal;opacity:.7;font-size:12.5px;margin-left:4px}
 
 .hdr .brand,.ft .brand{display:inline-flex;align-items:center;gap:9px;flex-wrap:nowrap}
-.hdr .brand__logo{height:30px;width:auto;flex:0 0 auto;display:block}
-.ft .brand__logo{height:38px;width:auto;flex:0 0 auto;display:block}
 @media (max-width:560px){.hdr .brand__logo{height:25px}}
 
 .flat__img{position:relative}
@@ -306,3 +304,8 @@ picture{display:block}
   background:rgba(251,244,239,.5);transition:background .3s}
 .slider__dots button[aria-current="true"]{background:#FBF4EF}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
+
+.hdr .brand,.ft .brand{display:inline-flex;align-items:center;gap:10px;line-height:1}
+.hdr .brand__logo{height:38px;width:38px;flex:0 0 auto;display:block;background:none}
+.ft .brand__logo{height:42px;width:42px;flex:0 0 auto;display:block;background:none}
+@media (max-width:560px){.hdr .brand__logo{height:32px;width:32px}}
