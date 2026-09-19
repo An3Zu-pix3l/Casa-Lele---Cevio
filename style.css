@@ -306,6 +306,6 @@ picture{display:block}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
 
 .hdr .brand,.ft .brand{display:inline-flex;align-items:center;gap:10px;line-height:1}
-.hdr .brand__logo{height:38px;width:38px;flex:0 0 auto;display:block;background:none}
+.hdr .brand__logo{height:48px;width:48px;flex:0 0 auto;display:block;background:none}
 .ft .brand__logo{height:42px;width:42px;flex:0 0 auto;display:block;background:none}
-@media (max-width:560px){.hdr .brand__logo{height:32px;width:32px}}
+@media (max-width:560px){.hdr .brand__logo{height:38px;width:38px}}
