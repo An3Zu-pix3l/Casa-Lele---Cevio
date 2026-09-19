@@ -228,6 +228,15 @@ p{margin:0 0 1em}
 .gal figure{margin:0}
 .gal .ph,.gal img{border-radius:var(--r-sm);box-shadow:var(--sh)}
 .gal figcaption{margin-top:10px;font-size:13.6px;color:var(--ink-2);line-height:1.45}
+.slides picture{position:absolute;inset:0;display:block}
+.slides img{width:100%;height:100%;object-fit:cover;opacity:0;animation:slides-fade 12s infinite}
+.slides picture:nth-child(2) img{animation-delay:4s}
+.slides picture:nth-child(3) img{animation-delay:8s}
+@keyframes slides-fade{0%{opacity:0}4%{opacity:1}29%{opacity:1}33%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){
+  .slides img{animation:none;opacity:0}
+  .slides picture:first-child img{opacity:1}
+}
 .credit{font-size:13px;color:var(--ink-2);margin-top:22px}
 
 /* ubicacion */
@@ -542,7 +551,11 @@ picture{display:block}
     </div>
     <h3 style="margin-top:56px">Das erwartet dich in der Region</h3>
     <div class="gal">
-      <figure><picture><source type="image/webp" srcset="fotos/foroglio-640.webp 640w, fotos/foroglio-1024.webp 1024w, fotos/foroglio-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img class="ph r4x3" src="fotos/foroglio-1600.jpg" srcset="fotos/foroglio-640.jpg 640w, fotos/foroglio-1024.jpg 1024w, fotos/foroglio-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Wasserfall von Foroglio, 80 m, Val Bavona" width="1600" height="900" loading="lazy" decoding="async"></picture><figcaption>Wasserfall von Foroglio, 80 m, Val Bavona</figcaption></figure>
+      <figure><div class="ph r4x3 slides">
+        <picture><source type="image/webp" srcset="fotos/foroglio-640.webp 640w, fotos/foroglio-1024.webp 1024w, fotos/foroglio-1600.webp 1600w" sizes="(max-width:700px) 100vw, 300px"><img src="fotos/foroglio-1600.jpg" srcset="fotos/foroglio-640.jpg 640w, fotos/foroglio-1024.jpg 1024w, fotos/foroglio-1600.jpg 1600w" sizes="(max-width:700px) 100vw, 300px" alt="Wasserfall von Foroglio, 80 m, Val Bavona" width="1600" height="900" loading="lazy" decoding="async"></picture>
+        <picture><source type="image/webp" srcset="fotos/foroglio-schaukel-500.webp 500w"><img src="fotos/foroglio-schaukel-500.jpg" alt="Schaukel mit Blick auf den Wasserfall von Foroglio" width="500" height="900" loading="lazy" decoding="async"></picture>
+        <picture><source type="image/webp" srcset="fotos/foroglio-bruecke-525.webp 525w"><img src="fotos/foroglio-bruecke-525.jpg" alt="Alte Steinbrücke im Val Bavona bei Foroglio" width="525" height="700" loading="lazy" decoding="async"></picture>
+      </div><figcaption>Wasserfall von Foroglio, 80 m, Val Bavona</figcaption></figure>
       <figure><div class="ph r4x3"><span>Val Bavona</span></div><figcaption>Val Bavona, Steindörfer ohne Stromnetz</figcaption></figure>
       <figure><div class="ph r4x3"><span>Robiei</span></div><figcaption>Robiei, Seilbahn und Bergseen auf 2000 m</figcaption></figure>
       <figure><div class="ph r4x3"><span>Maggia</span></div><figcaption>Baden in den Felsbecken der Maggia</figcaption></figure>
