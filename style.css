@@ -272,3 +272,11 @@ input::placeholder,textarea::placeholder{color:#B49E91}
 
 picture{display:block}
 .hero__media picture,.whole picture{height:100%}
+
+.brand__logo{width:auto;height:38px;display:block}
+.ft .brand__logo{height:46px}
+
+.hdr .brand,.ft .brand{display:inline-flex;align-items:center;gap:9px;flex-wrap:nowrap}
+.hdr .brand__logo{height:30px;width:auto;flex:0 0 auto;display:block;position:relative;top:-1px}
+.ft .brand__logo{height:38px;width:auto;flex:0 0 auto;display:block}
+@media (max-width:560px){.hdr .brand__logo{height:25px}}
