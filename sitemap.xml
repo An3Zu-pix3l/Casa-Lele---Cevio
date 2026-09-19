@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://casacevio.ch/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casacevio.ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://casacevio.ch/en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casacevio.ch/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casacevio.ch/it.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://casacevio.ch/index.html"/>
+  <url><loc>https://casalele.ch/</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casalele.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casalele.ch/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casalele.ch/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casalele.ch/it.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casalele.ch/"/>
   </url>
-  <url><loc>https://casacevio.ch/en.html</loc>
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casacevio.ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://casacevio.ch/en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casacevio.ch/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casacevio.ch/it.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://casacevio.ch/index.html"/>
+  <url><loc>https://casalele.ch/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casalele.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casalele.ch/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casalele.ch/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casalele.ch/it.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casalele.ch/"/>
   </url>
-  <url><loc>https://casacevio.ch/fr.html</loc>
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casacevio.ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://casacevio.ch/en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casacevio.ch/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casacevio.ch/it.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://casacevio.ch/index.html"/>
+  <url><loc>https://casalele.ch/fr.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casalele.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casalele.ch/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casalele.ch/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casalele.ch/it.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casalele.ch/"/>
   </url>
-  <url><loc>https://casacevio.ch/it.html</loc>
-    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casacevio.ch/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://casacevio.ch/en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casacevio.ch/fr.html"/>
-    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casacevio.ch/it.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://casacevio.ch/index.html"/>
+  <url><loc>https://casalele.ch/it.html</loc>
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://casalele.ch/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casalele.ch/en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr-CH" href="https://casalele.ch/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="it-CH" href="https://casalele.ch/it.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casalele.ch/"/>
   </url>
 </urlset>
