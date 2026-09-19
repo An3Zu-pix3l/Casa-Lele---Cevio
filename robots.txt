@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://casacevio.ch/sitemap.xml
+Sitemap: https://casalele.ch/sitemap.xml

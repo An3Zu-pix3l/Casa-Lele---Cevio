@@ -93,7 +93,7 @@ repositorio, están en la carpeta de Drive del proyecto.
 
 Cada página declara canonical, hreflang de los cuatro idiomas más
 x-default, Open Graph y datos estructurados `LodgingBusiness`. El dominio
-escrito en todo eso es **casacevio.ch** y aún no está decidido si será el
+escrito en todo eso es **casalele.ch** y aún no está decidido si será el
 definitivo: si cambia, hay que actualizarlo en los cuatro HTML, en
 `sitemap.xml`, en `robots.txt` y en `data.json`, y también el correo de
 contacto.
