@@ -309,3 +309,5 @@ picture{display:block}
 .hdr .brand__logo{height:48px;width:48px;flex:0 0 auto;display:block;background:none}
 .ft .brand__logo{height:42px;width:42px;flex:0 0 auto;display:block;background:none}
 @media (max-width:560px){.hdr .brand__logo{height:38px;width:38px}}
+
+video.ph{width:100%;height:auto;aspect-ratio:16/9;display:block;background:#2E2521}
