@@ -14,14 +14,22 @@ de Drive «Casa Lele»:
 - `AN - Cambios web_Casa Lele.xlsx` — el de Adrian, en castellano
 - `EM - Modifiche web_Casa Lele.xlsx` — el de Ele, en italiano
 
-**Al empezar cualquier sesion, antes de tocar la web, pide permiso para
-mirarlos.** Preguntalo asi, y espera respuesta:
+**Al empezar cualquier sesion, lo primero es mirarlos. No esperes a que
+te lo pidan.** El orden es este:
 
-> Antes de empezar: ¿quieres que mire los dos Excel de seguimiento (AN y
-> EM) y te diga si hay novedades y si hay puntos listos para aplicar?
-
-Si dice que si, haz la sincronizacion descrita mas abajo. Si dice que no,
-sigue con lo que pida y no vuelvas a preguntarlo en esa sesion.
+1. Pide permiso en una linea: «¿Abro los dos Excel de seguimiento para
+   ver si hay novedades?». Si dicen que no, sigue y no vuelvas a
+   preguntarlo en esa sesion.
+2. Abrelos y detecta las novedades asi: **lo que esta escrito en la
+   columna E de un archivo y no aparece en la columna F del otro es
+   nuevo**. No hace falta ningun registro aparte, los propios archivos lo
+   dicen.
+3. Avisa en pocas lineas de lo que haya: cuantos puntos nuevos ha escrito
+   la otra persona y cuales son, por su numero y su zona.
+4. Pregunta que prefieren: ver esas novedades en detalle y sincronizar
+   ahora, o dejarlo y seguir con otra cosa. Espera respuesta.
+5. Si no hay novedades, dilo en una linea y pregunta por donde quieren
+   seguir. No conviertas esto en un informe largo.
 
 Si no encuentras la carpeta de Drive, pregunta por su ruta: cambia segun
 el ordenador. En el Mac de Adrian esta en
