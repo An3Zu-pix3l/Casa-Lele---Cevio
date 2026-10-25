@@ -6,6 +6,86 @@ Publicado en Vercel; cada commit en `main` se publica automáticamente.
 
 URL: https://casa-lele-cevio.vercel.app
 
+## Antes de nada, en cada sesion
+
+Este proyecto se coordina con dos archivos Excel que viven en la carpeta
+de Drive «Casa Lele»:
+
+- `AN - Cambios web_Casa Lele.xlsx` — el de Adrian, en castellano
+- `EM - Modifiche web_Casa Lele.xlsx` — el de Ele, en italiano
+
+**Al empezar cualquier sesion, antes de tocar la web, pide permiso para
+mirarlos.** Preguntalo asi, y espera respuesta:
+
+> Antes de empezar: ¿quieres que mire los dos Excel de seguimiento (AN y
+> EM) y te diga si hay novedades y si hay puntos listos para aplicar?
+
+Si dice que si, haz la sincronizacion descrita mas abajo. Si dice que no,
+sigue con lo que pida y no vuelvas a preguntarlo en esa sesion.
+
+Si no encuentras la carpeta de Drive, pregunta por su ruta: cambia segun
+el ordenador. En el Mac de Adrian esta en
+`~/Library/CloudStorage/GoogleDrive-<correo>/Mi unidad/Casa Lele`.
+
+## Los dos Excel de seguimiento
+
+Cada hoja tiene 17 puntos numerados, y **el Nº es la clave**: el punto 9
+de un archivo es el mismo punto que el 9 del otro. Nunca renumerar ni
+reordenar filas.
+
+| Col | Que es | Quien escribe |
+|---|---|---|
+| A | Nº del punto | nadie |
+| B | Captura de la zona de la web | nadie |
+| C | Zona de la web | nadie |
+| D | Punto a cambiar | nadie |
+| E (amarilla) | la idea del dueño de ese archivo | Adrian / Ele |
+| F (azul) | la idea de la otra persona, traducida | Claude |
+| G | Estado | formula, luego Claude |
+| H | Fecha del ultimo movimiento | Claude |
+| I | De quien es la idea que gana | Claude |
+
+Toda la hoja esta protegida menos la columna E, sin contraseña. Al
+escribir con openpyxl la proteccion se ignora: no hay que desactivarla.
+
+Estados, castellano / italiano: Pendiente / In sospeso, En curso / In
+corso, Decidido / Deciso, Hecho / Fatto, Descartado / Scartato.
+
+G lleva una formula que pone Pendiente mientras E y F esten vacias, y En
+curso en cuanto una de las dos tenga texto. Al pasar un punto a Decidido,
+Hecho o Descartado se sustituye la formula por el texto.
+
+### Al sincronizar
+
+1. Abrir los dos archivos y comparar punto por punto.
+2. Copiar lo que cada uno ha escrito en su E a la F del otro, traducido
+   (castellano a italiano y al reves). La F se reescribe entera cada vez.
+3. Poner la fecha de hoy en H en los puntos que hayan cambiado.
+4. Resumir a la persona: que hay nuevo, en que coinciden, en que no, y
+   que puntos estan listos para decidir.
+5. **No aplicar ningun cambio en la web por iniciativa propia.**
+
+### Cuando dicen que un punto esta decidido
+
+Estado a Decidido, iniciales en I de quien era la idea ganadora, fecha de
+hoy en H, y la idea descartada se deja **tachada** en su celda (fuente con
+strike), sin borrarla.
+
+### Cuando piden aplicar los decididos
+
+Hacer los cambios en los cuatro HTML y despues marcar esos puntos como
+Hecho con la fecha de hoy. Solo se aplican los que esten en Decidido.
+
+### Reglas de los dos archivos
+
+- Se abren con **LibreOffice**, no con Numbers ni con Google Sheets: solo
+  LibreOffice respeta el bloqueo, los desplegables y las imagenes, y
+  guarda en `.xlsx` sin exportar.
+- Si un texto de la columna E no cabe en su fila, agrandar la altura de
+  esa fila al sincronizar.
+- Si alguien ha escrito por error fuera de su columna, restaurar el valor
+  original y decir que se ha restaurado.
+
 ## Idiomas
 
 Cuatro páginas independientes, cada una completa:
@@ -126,12 +206,13 @@ conviene comprobarlo antes de empezar.
 
 ## Pendiente ahora mismo
 
-Lista completa y actualizada en `ESTADO.md` (Drive). Lo que bloquea la
-publicación: quitar el bloque de reseñas vacío, escribir Impressum,
-protección de datos y reglamento de la casa (los enlaces del pie ya
-apuntan a `impressum.html`, `datenschutz.html` y `hausregeln.html`, que
-dan 404), decidir el dominio, y poner la calle en el pie, donde sale `__`
-en lugar de Rovana 32.
+Lista completa y actualizada en `ESTADO.md` (Drive), y los 17 puntos de
+mejora grafica en los dos Excel de seguimiento.
+
+El dominio y las doce paginas legales estan **aplazados a proposito**:
+son los ultimos pasos, justo antes de migrar a Hostpoint. Vercel es solo
+el visor de trabajo mientras tanto, y por eso la indexacion esta
+bloqueada en `robots.txt`.
 
 ## Pendiente para el dia de la migracion a Hostpoint
 
