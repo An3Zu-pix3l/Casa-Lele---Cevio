@@ -132,3 +132,31 @@ protección de datos y reglamento de la casa (los enlaces del pie ya
 apuntan a `impressum.html`, `datenschutz.html` y `hausregeln.html`, que
 dan 404), decidir el dominio, y poner la calle en el pie, donde sale `__`
 en lugar de Rovana 32.
+
+## Pendiente para el dia de la migracion a Hostpoint
+
+La web vive en Vercel solo como visor de trabajo. El destino final es el
+alojamiento de Hostpoint con el dominio casalele.ch. Mientras tanto, la
+indexacion esta bloqueada a proposito.
+
+Al migrar hay que hacer todo esto, y en este orden:
+
+1. **Restaurar `robots.txt`**: `Allow: /` y la linea
+   `Sitemap: https://casalele.ch/sitemap.xml`. Ahora pone `Disallow: /`.
+2. **Subir los archivos a Hostpoint** por FTP, respetando la estructura:
+   los HTML y `style.css` en la raiz, y las carpetas `fotos/`, `logo/` y
+   `video/` tal cual.
+3. **Apuntar el dominio casalele.ch** al alojamiento de Hostpoint y
+   comprobar que responde con y sin www, y que el certificado HTTPS esta
+   activo.
+4. **Comprobar los canonicos y los hreflang**: ya dicen casalele.ch, pero
+   hay que verificar que la portada alemana responde en la raiz del
+   dominio y no en /index.html.
+5. **Decidir como se publica a partir de entonces**: Hostpoint es FTP
+   clasico, asi que el despliegue automatico desde GitHub se acaba. O se
+   sube a mano cada cambio, o se monta una publicacion automatica.
+6. **Dar de alta la web en Google Search Console** y enviar el sitemap.
+7. **Apagar o borrar el proyecto de Vercel**, para que no queden dos
+   copias de la misma web en internet.
+8. **Escribir las doce paginas legales** antes de abrir al publico: son
+   el ultimo paso del contenido y son obligatorias en Suiza.
